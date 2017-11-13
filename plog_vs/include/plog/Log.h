@@ -111,3 +111,34 @@
 #define LOGE_IF_(instance, condition)           LOG_ERROR_IF_(instance, condition)
 #define LOGF_IF_(instance, condition)           LOG_FATAL_IF_(instance, condition)
 #define LOGN_IF_(instance, condition)           LOG_NONE_IF_(instance, condition)
+
+// For scope
+#define LOG_SCOPE(func, line, file, object) \
+	IF_LOG_(PLOG_DEFAULT_INSTANCE, plog::debug) \
+	(*plog::get<PLOG_DEFAULT_INSTANCE>()) += plog::Record(plog::debug, func, line, file, object)
+
+class FunctionScope
+{
+public:
+	FunctionScope(char *func_name, size_t line, char *file_name, void *m_object)
+		: m_func_name(func_name)
+		, m_line(line)
+		, m_file_name(file_name)
+		, m_object(m_object)
+	{
+		LOG_SCOPE(m_func_name, m_line, m_file_name, m_object) << "Enter " << m_func_name;
+	}
+
+	~FunctionScope()
+	{
+		LOG_SCOPE(m_func_name, m_line, m_file_name, m_object) << "Leave " << m_func_name;
+	}
+
+private:
+	char *m_func_name;
+	size_t m_line;
+	char *m_file_name;
+	void *m_object;
+};
+
+#define ENTER_FUNC() FunctionScope fs(PLOG_GET_FUNC(), __LINE__, PLOG_GET_FILE(), PLOG_GET_THIS())
