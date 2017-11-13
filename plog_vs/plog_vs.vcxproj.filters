@@ -13,5 +13,81 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Appenders">
+      <UniqueIdentifier>{df5209da-0e92-4edd-bab6-779e04ec2044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Converters">
+      <UniqueIdentifier>{2044f8f5-bd22-4143-abfd-d9af6c8fc038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Formatters">
+      <UniqueIdentifier>{7ee55072-d820-4dd4-b9be-f439e187e65a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\plog\Init.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Record.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Severity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\WinApi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Appenders\AndroidAppender.h">
+      <Filter>Header Files\Appenders</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Appenders\ColorConsoleAppender.h">
+      <Filter>Header Files\Appenders</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Appenders\ConsoleAppender.h">
+      <Filter>Header Files\Appenders</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Appenders\DebugOutputAppender.h">
+      <Filter>Header Files\Appenders</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Appenders\EventLogAppender.h">
+      <Filter>Header Files\Appenders</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Appenders\IAppender.h">
+      <Filter>Header Files\Appenders</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Appenders\RollingFileAppender.h">
+      <Filter>Header Files\Appenders</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Converters\NativeEOLConverter.h">
+      <Filter>Header Files\Converters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Converters\UTF8Converter.h">
+      <Filter>Header Files\Converters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Formatters\CsvFormatter.h">
+      <Filter>Header Files\Formatters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Formatters\FuncMessageFormatter.h">
+      <Filter>Header Files\Formatters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Formatters\MessageOnlyFormatter.h">
+      <Filter>Header Files\Formatters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\plog\Formatters\TxtFormatter.h">
+      <Filter>Header Files\Formatters</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
