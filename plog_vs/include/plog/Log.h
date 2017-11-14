@@ -120,11 +120,11 @@
 class FunctionScope
 {
 public:
-	FunctionScope(char *func_name, size_t line, char *file_name, void *m_object)
+	explicit FunctionScope(char *func_name, size_t line, char *file_name, void *object)
 		: m_func_name(func_name)
 		, m_line(line)
 		, m_file_name(file_name)
-		, m_object(m_object)
+		, m_object(object)
 	{
 		LOG_SCOPE(m_func_name, m_line, m_file_name, m_object) << "Enter " << m_func_name;
 	}
