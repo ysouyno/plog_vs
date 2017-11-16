@@ -120,7 +120,7 @@
 class FunctionScope
 {
 public:
-	explicit FunctionScope(char *func_name, size_t line, char *file_name, void *object)
+	FunctionScope(const char *func_name, size_t line, const char *file_name, void *object)
 		: m_func_name(func_name)
 		, m_line(line)
 		, m_file_name(file_name)
@@ -135,9 +135,9 @@ public:
 	}
 
 private:
-	char *m_func_name;
+	const char *m_func_name;
 	size_t m_line;
-	char *m_file_name;
+	const char *m_file_name;
 	void *m_object;
 };
 
